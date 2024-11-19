@@ -1,0 +1,185 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Navbar */
+.Navbar {
+    max-width: 1200px;
+    min-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 80px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.347);
+
+    .Logo {
+        display: block;
+        height: 49px;
+        -webkit-transition: -webkit-transform .3s cubic-bezier(.215, .61, .355, 1);
+        transition: -webkit-transform .3s cubic-bezier(.215, .61, .355, 1);
+        transition: transform .3s cubic-bezier(.215, .61, .355, 1);
+        transition: transform .3s cubic-bezier(.215, .61, .355, 1), -webkit-transform .3s cubic-bezier(.215, .61, .355, 1);
+        margin-right: 16px;
+
+        svg.VXJlj {
+            margin-left: 10px;
+        }
+    }
+
+    .NavOptions {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        min-width: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        height: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 20px;
+
+        .NavItems {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+
+            .Item {
+                position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: 80px;
+                cursor: pointer;
+                padding-left: 28px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+        }
+    }
+}
+
+/* Restaurants */
+.FoodImg {
+    width: 278px;
+    height: 185px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.FoodDetails {
+    position: relative;
+    margin-left: 12px;
+
+    .ResName {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: rgba(2, 6, 12, 0.92);
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .Duration {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(2, 6, 12, 0.92);
+    }
+
+    .Rating {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(2, 6, 12, 0.92);
+    }
+
+    .Cuisines,
+    .Address {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(2, 6, 12, 0.6);
+    }
+}
+
+.Outer {
+    width: 278px;
+    height: 288px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.Inner {
+    display: grid;
+    cursor: pointer;
+    gap: 12px;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-content: stretch;
+    -webkit-box-align: center;
+}
+
+.Abc {
+    display: flex;
+    gap: 10px;
+}
+
+.Restaurants {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    min-width: 1200px;
+}
+
+.Headline {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0px 150px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    min-width: 1200px;
+
+    h2 {
+        margin-left: 10px;
+    }
+}
+
+.FoodCards {
+    padding: 0px;
+    list-style: none;
+    margin-block-end: 0px;
+    display: grid;
+    -webkit-box-align: start;
+    align-items: start;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin: 32px 150px;
+    max-width: 1200px;
+    min-width: 1200px;
+}
