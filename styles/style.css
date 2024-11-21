@@ -55,7 +55,16 @@ body {
             display: flex;
             flex-direction: row;
             list-style: none;
-            gap: 20px;
+            gap: 40px;
+
+            .ItemContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0px;
+                padding: 0px;
+                cursor: pointer;
+            }
 
             .Item {
                 position: relative;
@@ -67,9 +76,11 @@ body {
                 align-items: center;
                 height: 80px;
                 cursor: pointer;
-                padding-left: 28px;
+                padding-left: 8px;
                 font-weight: 500;
                 font-size: 18px;
+                text-decoration: none;
+                color: black;
             }
 
         }
@@ -157,6 +168,42 @@ body {
     min-width: 1200px;
 }
 
+.Filter {
+    margin: 0px 160px;
+    cursor: pointer;
+    margin-bottom: -15px;
+
+    .RatingBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(2, 6, 12, 0.15);
+        padding: 8px 12px;
+        width: auto;
+        box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
+    }
+
+    .RatingBox,
+    .Contents {
+        display: inline-grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: max-content;
+    }
+
+    .RatingPlus {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+        color: rgba(2, 6, 12, 0.75);
+    }
+}
+
 .Headline {
     font-size: 18px;
     line-height: 28px;
@@ -207,11 +254,15 @@ body {
     min-width: 961px;
 }
 
-.Contact{
+.Contact {
     margin-bottom: 35px;
 }
 
-.Company, .Contact, .Legal, .Availability, .SwiggyLife {
+.Company,
+.Contact,
+.Legal,
+.Availability,
+.SwiggyLife {
     ul {
         list-style: none;
         margin: 0px;

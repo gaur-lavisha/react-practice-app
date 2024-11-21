@@ -4,7 +4,7 @@
   "description": "creating a food app using react",
   "main": "App.js",
   "scripts": {
-    "start": "set PORT=1857 && parcel index.html",
+    "start": "set PORT=2003 && parcel index.html",
     "test": "jest"
   },
   "repository": {
@@ -18,6 +18,9 @@
   "author": "Lavisha Gaur",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^6.1.8",
     "foodapp": "file:",
     "parcel": "^2.13.0",
     "react": "^18.3.1",
