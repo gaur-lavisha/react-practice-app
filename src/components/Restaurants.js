@@ -3,6 +3,7 @@ import FoodCard from "../common/FoodCard";
 import { resData } from "../utils/dummyData.js";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
+import Shimmer from "./Shimmer.js";
 
 const Restaurants = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -10,7 +11,7 @@ const Restaurants = () => {
   const [searchText, setSearchText] = useState("");
   const [check, setCheck] = useState(true);
 
-  // Filter Restaurants with 4.0+ Ratings : 
+  // Filter Restaurants with 4.0+ Ratings :
   const updateRestaurantList = () => {
     const filteredList = restaurantList.filter(
       (restaurant) => restaurant.rating > 4
@@ -32,7 +33,9 @@ const Restaurants = () => {
     setFilteredResList(resData);
   }, []);
 
-  return (
+  return restaurantList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="Restaurants">
       <div className="Headline">
         <h2>Restaurants with online food delivery in Indore</h2>
