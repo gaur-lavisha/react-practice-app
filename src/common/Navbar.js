@@ -1,5 +1,5 @@
-import React from "react";
-import SearchIcon from "@mui/icons-material/Search";
+import React, { useState } from "react";
+
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -9,6 +9,8 @@ import Logo from "./Logo";
 import { SWIGGY_CORPORATE } from "../utils/urls";
 
 const Navbar = () => {
+
+
   return (
     <div className="Navbar">
       <div className="Logo">
@@ -16,15 +18,12 @@ const Navbar = () => {
       </div>
       <div className="NavOptions">
         <ul className="NavItems">
+          
           <div className="ItemContainer">
             <a className="Item" href={SWIGGY_CORPORATE} target="_blank">
               <CorporateFareOutlinedIcon style={{ color: "black" }} />
               <li className="Item">Swiggy Corporate</li>
             </a>
-          </div>
-          <div className="ItemContainer">
-            <SearchIcon style={{ color: "black" }} />
-            <li className="Item">Search</li>
           </div>
           <div className="ItemContainer">
             <LocalOfferOutlinedIcon style={{ color: "black" }} />

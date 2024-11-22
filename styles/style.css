@@ -5,27 +5,22 @@ body {
 /* Navbar */
 
 .Navbar {
-    max-width: 1200px;
-    min-width: 1200px;
-    position: relative;
+    max-width: 1250px;
+    min-width: 1250px;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
     margin: 0 auto;
     height: 80px;
     background: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.347);
+    z-index: 1;
 
     .Logo {
         display: block;
         height: 49px;
-        -webkit-transition: -webkit-transform .3s cubic-bezier(.215, .61, .355, 1);
-        transition: -webkit-transform .3s cubic-bezier(.215, .61, .355, 1);
-        transition: transform .3s cubic-bezier(.215, .61, .355, 1);
-        transition: transform .3s cubic-bezier(.215, .61, .355, 1), -webkit-transform .3s cubic-bezier(.215, .61, .355, 1);
         margin-right: 16px;
 
         svg.VXJlj {
@@ -34,22 +29,13 @@ body {
     }
 
     .NavOptions {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
         flex: 1;
         min-width: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse;
         height: 100%;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        margin-right: 20px;
+        margin-right: 0px;
+        margin-left: 450px;
 
         .NavItems {
             display: flex;
@@ -68,11 +54,7 @@ body {
 
             .Item {
                 position: relative;
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
                 align-items: center;
                 height: 80px;
                 cursor: pointer;
@@ -114,6 +96,7 @@ body {
         color: rgba(2, 6, 12, 0.92);
         overflow: hidden;
         width: 100%;
+        margin-bottom: 8px;
     }
 
     .Duration {
@@ -123,11 +106,24 @@ body {
         color: rgba(2, 6, 12, 0.92);
     }
 
+    .Star {
+        margin-left: 0px;
+        margin-right: -5px;
+    }
+
     .Rating {
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
         color: rgba(2, 6, 12, 0.92);
+    }
+
+    .Rating, .Duration {
+        margin-top: -5px;
+    }
+
+    .Cuisines {
+        margin-bottom: 3px;
     }
 
     .Cuisines,
@@ -141,9 +137,15 @@ body {
 
 .Outer {
     width: 278px;
-    height: 288px;
+    height: 350px;
     background-color: white;
     margin-top: 20px;
+    cursor: pointer;
+    transition: transform .1s;
+}
+
+.Outer:hover {
+    transform: scale(0.9);
 }
 
 .Inner {
@@ -153,12 +155,13 @@ body {
     grid-auto-flow: row;
     align-items: center;
     justify-content: stretch;
-    -webkit-box-align: center;
 }
 
 .Abc {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3px;
 }
 
 .Restaurants {
@@ -170,19 +173,27 @@ body {
 
 .Filter {
     margin: 0px 160px;
-    cursor: pointer;
     margin-bottom: -15px;
+    display: flex;
+    
 
     .RatingBox {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 18px;
+        border-radius: 20px;
         background-color: rgb(255, 255, 255);
         border: 2px solid rgba(2, 6, 12, 0.15);
         padding: 8px 12px;
         width: auto;
         box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
+        cursor: pointer;
+    }
+
+    .Contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .RatingBox,
@@ -207,7 +218,7 @@ body {
 .Headline {
     font-size: 18px;
     line-height: 28px;
-    margin: 0px 150px;
+    margin: 0px 125px;
     margin-top: 10px;
     align-items: center;
     justify-content: center;
@@ -219,12 +230,40 @@ body {
     }
 }
 
+.SearchBoxContainer {
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+.SearchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .SearchIcon {
+        margin-left: -35px;
+    }
+
+    input {
+        border: 1px solid rgb(112, 112, 112);
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 20px;
+        padding: 10px;
+        width: 400px;
+        display: flex;
+        color: black;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
 .FoodCards {
     padding: 0px;
     list-style: none;
     margin-block-end: 0px;
     display: grid;
-    -webkit-box-align: start;
     align-items: start;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
@@ -237,6 +276,8 @@ body {
 
 .Footer {
     background-color: rgba(218, 218, 218, 0.367);
+    margin: -10px;
+    width: 1600px;
 }
 
 .FooterOuter {
